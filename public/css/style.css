@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background: rgb(3 42 65);
+    opacity: 0.9;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    /* margin-bottom: 30vh; */
+  }
+  nav .logo img {
+    width: 60px;
+  }
+  nav .nav-links a {
+    text-decoration: none;
+    margin: auto 10px;
+    font-size: 20px;
+    color: white;
+    transition: text-decoration 2s;
+  }
+  nav .nav-links .icon {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    nav .nav-links a:not(:last-child) {
+      display: none;
+    }
+    nav .nav-links .icon {
+      display: block;
+    }
+    nav {
+      padding: 5px 8px;
+    }
+    nav .logo img {
+      width: 50px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    nav .nav-links.responsive {
+      position: relative;
+    }
+    nav .nav-links.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    nav .nav-links.responsive a {
+      display:block;
+      text-align: left;
+    }
+  }
+
+
+/* -----------------footer------------------------- */
+footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+  background: rgb(3 42 65);
+  opacity: 0.9;
+  color: white;
+}
+footer .logo img{
+  width: 60px;
+  margin: 20px;
+   
+}
+footer .footer-left .social-links i{
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+footer .footer-left .social-links .fasbo:hover{
+  background: white;
+  color: #1876ef;
+}
+footer .footer-left .social-links .ytb:hover{
+  background: white;
+  color: red;
+}
+footer .footer-left .social-links .twt:hover{
+  background: white;
+  color: #099fb3;
+}
+footer .footer-left .social-links .ins:hover{
+  background: white;
+  color: #a00c67;
+}
+
+
+
+footer .footer-left .email i{
+  font-size: 20px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+footer .footer-right{
+  padding: 20px;
+}
+footer .footer-right textarea{
+  width: 300px;
+  height: 120px;
+  border: 0;
+  outline: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
+}
+footer .footer-right .query input{
+  width: 200px;
+  border: 0;
+  outline: none;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
+}
+footer .footer-right .query button{
+  width: 92px;
+  border: 0;
+  outline: none;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+footer .footer-right .query button:hover{
+  background: gray;
+}
+#devloper p{
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  background: #023153;
+  color: black;
+  font-weight: bold
+}
+footer .footer-left .social-links i:hover{
+  text-shadow: #023153;
+}
+
+@media screen and (max-width:600px) {
+  footer{
+    padding: 10px;
+    text-align: center;
+    display: block;
+  }
+  footer .logo img{
+  width: 40px;
+  }
+  footer .footer-left .social-links i{
+    padding: 6px;
+  }
+}
+
+
+.member{
+  display: flex;
+  border: 1px solid gray;
+  /* margin-top: 10px; */
+}
+.member .tabs{
+  width: 30%;
+  border: 1px solid gray;
+}
+.member .tabs button{
+  /* margin-left: 20px; */
+  padding: 20px;
+  font-size: 20px;
+  border: 0;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.member .tabs button:hover{
+  background: gray;
+}
+.member .content{
+  border: 1px solid gray;
+  width: 70%;
+}
+.member .content .forms{
+  display: none;
+
+}
+.member .content .payment{
+  display: none;
+}
+.member .content .benifit-content{
+  display: block;
+}
+
+
+.forms{
+  align-self: center;
+  text-align: center;
+  background: #023153;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.forms h2{
+  margin-bottom: 20px;
+}
+.forms input{
+  width: 400px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  border:  1px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+  border-radius: 4px;
+}
+.forms button{
+  width: 400px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width:600px) {
+  .member .tabs button{ 
+    padding: 5px;
+    font-size: 15px;
+     
+  }
+  .forms input{
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    
+  }
+  .forms button{
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+}
+
+
+
+.payment{
+  padding: 40px 40px 200px 40px;
+}
+.payment h2{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.payment p{
+  font-size: 20px;
+  line-height: 30px;
+}
+.payment button{
+  width: 250px;
+  margin: auto;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 30px;
+  float: right;
+  color: white;
+  background: #023961;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+}
+.payment button:hover{
+  background: #01243d;
+}
+@media screen and (max-width:600px) {
+  .payment{
+    padding: 40px 20px 200px 20px;
+  }
+  .payment h2{
+    font-size: 20px;
+  }
+  .payment p{
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .payment button{
+    padding: 5px;
+    width: 150px;
+    font-size: 15px;
+    margin-top: 20px auto;
+  }
+}
+
+.member .accordin{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  background: #eee;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  text-align: left;
+  transition: 0.4s;
+}
+.active,.accordin:hover{
+  background: gray;
+}
+.member .panel{
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.member .panel p{
+  padding: 10px 5px 10px 5px ;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media screen and (max-width:600px) {
+  .member .panel p{
+    font-size: 15px;
+    line-height: 23px;
+    /* padding: 8px 3px 8px 3px; */
+  }
+  .member .panel{
+    padding: 0 10px;
+  }
+}
+.posts{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  grid-gap: 20px 10px;
+  padding: 10px;
+
+}
+.posts .post{
+  border: 1px solid gray;
+  padding: 5px;
+}
+.posts .post img{
+  width: 100%;
+}
+.posts a{
+  text-decoration: none;
+  color: black;
+}
+

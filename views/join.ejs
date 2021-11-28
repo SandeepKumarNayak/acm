@@ -1,0 +1,121 @@
+<%- include("header") -%>
+
+<div class="member">
+  <div class="tabs">
+    <button class="tab" id="benifits" onclick="myfunction(event,0)">
+      Benifits of membership</button
+    ><br />
+    <button class="tab" id="form" onclick="myfunction(event,1)">Form</button
+    ><br />
+    <button class="tab" id="payments" onclick="myfunction(event,2)">
+      Payment
+    </button>
+  </div>
+  <div class="content">
+
+
+    <div class="benifit-content tabcontent">
+      <button class="accordin">Benifit-1</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum quae facilis qui a eligendi suscipit, sint omnis earum, eveniet cumque, veniam laborum id! Eaque in ipsa animi fugit suscipit.</p>
+      </div>
+
+      <button class="accordin">Benifit-2</button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cumque itaque fugit numquam? Fuga, itaque perferendis maiores ex placeat sint ducimus neque porro voluptates, dolorem asperiores qui quibusdam distinctio nulla!</p>
+      </div>
+
+      <button class="accordin">Benifit-3</button>
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse in repudiandae possimus aspernatur impedit sed facere expedita, magnam numquam. Atque est saepe dolores velit eum, quam doloremque quae odit itaque?</p>
+      </div>
+      <button class="accordin">Benifit-4</button>
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse in repudiandae possimus aspernatur impedit sed facere expedita, magnam numquam. Atque est saepe dolores velit eum, quam doloremque quae odit itaque?</p>
+      </div>
+      <button class="accordin">Benifit-5</button>
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse in repudiandae possimus aspernatur impedit sed facere expedita, magnam numquam. Atque est saepe dolores velit eum, quam doloremque quae odit itaque?</p>
+      </div>
+      <button class="accordin">Benifit-6</button>
+      <div class="panel">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse in repudiandae possimus aspernatur impedit sed facere expedita, magnam numquam. Atque est saepe dolores velit eum, quam doloremque quae odit itaque?</p>
+      </div>
+    </div>
+
+
+
+    <div class="forms tabcontent">
+      <form action="">
+        <h2>Fill this Form</h2>
+        <input type="text" placeholder="First Name" name="fname" required /><br>
+        <input type="text" placeholder="Last Name" name="lname" required /><br>
+        <input type="text" placeholder="Father's Name" name="fathername" required><br>
+        <input type="email" placeholder="email" name="email" required /><br>
+        <input type="number" placeholder="whatsapp number" name="wname" required/><br>
+        <input type="text" name="enrollment" placeholder="Enrollment number" required/><br>
+        <input type="text" name="branch" placeholder="Branch" required /><br>
+        <input type="date" name="dob" placeholder="18/05/2000" required><br>
+        <input type="number" name="year" placeholder="Year" required /><br>
+        <button type="submit" type="submit">Next</button>
+      </form>
+    </div>
+    <div class="payment tabcontent">
+      <h2>Payment here</h2>
+      <p>This is your final step of registration, after submission of payment you have recieved a reciept of your payment.</p><br>
+      <p>Please do payment carefully</p>
+      <button id="rzp-button">Go for Payments</button>
+    </div>
+  </div>
+</div>
+<%- include("footer") -%>
+<script>
+
+var acc = document.getElementsByClassName("accordin");
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+  function myfunction(evt, name) {
+    var i, tabcontent;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < 3; i++) {
+      if (i == name) {
+        tabcontent[i].style.display = "block";
+      } else {
+        tabcontent[i].style.display = "none";
+      }
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  axios.post("/order").then(function (info) {
+    // console.log(info);
+    var options = {
+      key: "rzp_test_SvHWKkiDjVAfMv",
+      name: "ACM MITS",
+      description: "Test Transaction",
+      image: "images/acmlogo.png",
+      order_id: info.data.id,
+      callback_url: "/complete",
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById("rzp-button").onclick = function (e) {
+      rzp1.open();
+      e.preventDefault();
+    };
+});
+</script>

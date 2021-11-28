@@ -1,0 +1,40 @@
+<!-- <%- include("header") -%> -->
+<style>
+    .container{
+        padding: 20px;
+    }
+    .container h2{
+        margin: 0;
+        font-size: 30px;
+    }
+    .container h4{
+        margin: 0;
+        font-size: 22px;
+        color: #635757;
+    }
+    .container p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .blog{
+        display: flex;
+        /* justify-content: space-between; */
+        padding: 40px;
+        align-items: center;
+    }
+    .blog img{
+        width: 400px;
+        margin-right: 30px;
+    }
+</style>
+<div class="container">
+    <div class="blog">
+        <img src="<%= image %>">
+        <div class="aboutblog">
+            <h2><%= title %></h2>
+            <h4>Published by: &nbsp;<%= auther %></h4>
+            <h4><%= date %></h4>
+        </div>
+    </div>
+    <p><%= content %></p>
+</div>

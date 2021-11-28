@@ -1,0 +1,19 @@
+<%- include("header") -%>
+
+<div class="posts">
+    <% for(var i=0;i<blogs.length;i++){ %>
+        <a href="/blogs/<%= blogs[i].title %>">
+
+            <div class="post">
+                <img src= <%= blogs[i].image %>>
+                <h2><%= blogs[i].title %></h2>
+                <h4><%= blogs[i].auther %></h4>
+                <h4><%= blogs[i].date %></h4>
+                <p><%= blogs[i].content.substr(0,100) %></p>
+            </div>
+        </a>
+    <%} %>
+
+</div>
+ 
+<%- include("footer") -%>

@@ -1,0 +1,190 @@
+<%- include("header") -%>
+
+<div class="home">
+  <div class="slide">
+    <img src="images/acmhome.png" />
+  </div>
+  <!-- <div class="slide">
+        <img src="images/18.jpg">
+    </div> -->
+  <div class="slide">
+    <img src="images/298.jpg" />
+  </div>
+</div>
+<!-- <div class="home-images">
+    <img src="images/acmhome.png">
+</div> -->
+<div class="why-acm">
+  <h2>Why ACM</h2>
+  <p>
+    There are many reasons to join ACM. When you become a member, you become a
+    part of the dynamic changes that are transforming our world, by helping to
+    shape the future of computing. ACM provides the tools and resources to help
+    get you there, by advancing your career and enriching your knowledge with
+    life-long learning resources. ACM Professional and Student members enjoy
+    these benefits: Networking Opportunities: A vast network of over 110,000
+    highly dedicated student and professional peers ACM's Career, Job Centre,
+    where you will find targeted job opportunities and more The opportunity to
+    join one or more of ACM's Special Interest Groups in 37 specialty areas of
+    IT Become a member of computing community through one of hundreds of
+    Professional and Student Chapters worldwide Unique volunteering
+    opportunities to gain hands-on experience and knowledge of the marketplace.
+    Benefits included in the membership are: Complimentary Subscription to
+    Communications. Receipt of ACM’s Popular E-Newsletters. A full-year
+    electronic subscription to Crossroads, ACM’s Student Magazine. ACM Student
+    Quick Takes (SQT) a quarterly email newsletter with each issue highlighting
+    ACM activities, programs, and offerings of interest."
+  </p>
+</div>
+
+<div class="events" id="events">
+  <h2>Latest's Events</h2>
+  <div class="evenslide">
+    <div class="slide-2">
+      <img src="images/dadvent.png" />
+    </div>
+  </div>
+  <div class="evenslide">
+    <div class="slide-2">
+      <img src="images/dadvent.png" />
+    </div>
+  </div>
+</div>
+<div class="blogs">
+  <h2>Latest's Blogs</h2>
+</div>
+
+<div class="blogs">
+  <div class="blog">
+    <a href="/blogs/C++ programming language">
+      <img
+        src="https://media.istockphoto.com/photos/concept-of-the-popular-programming-language-c-plus-plus-picture-id1293425730?s=2048x2048"
+      />
+      <h4>C++ programming language</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis
+        impedit dolor, obcaecati commodi aliquam necessitatibus nulla voluptatem
+        distinctio odio alias consequatur sint atque molestiae iste ea tenetur.
+        Suscipit, modi!
+      </p>
+    </a>
+  </div>
+  <div class="blog">
+    <a href="/blogs/C++ programming language">
+
+      <img
+        src="https://media.istockphoto.com/photos/concept-of-the-popular-programming-language-c-plus-plus-picture-id1293425730?s=2048x2048"
+      />
+      <h4>C++ programming language</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis
+        impedit dolor, obcaecati commodi aliquam necessitatibus nulla voluptatem
+        distinctio odio alias consequatur sint atque molestiae iste ea tenetur.
+        Suscipit, modi!
+      </p>
+    </a>
+  </div>
+  <div class="blog">
+    <a href="/blogs/C++ programming language">
+
+      <img
+        src="https://media.istockphoto.com/photos/concept-of-the-popular-programming-language-c-plus-plus-picture-id1293425730?s=2048x2048"
+      />
+      <h4>C++ programming language</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis
+        impedit dolor, obcaecati commodi aliquam necessitatibus nulla voluptatem
+        distinctio odio alias consequatur sint atque molestiae iste ea tenetur.
+        Suscipit, modi!
+      </p>
+    </a>
+  </div>
+</div>
+
+<div class="t">
+  <h2 id="team">Our Team</h2>
+  <div class="team">
+    <div class="team-member member-1">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <div class="team-member member-2">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <div class="team-member member-3">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <div class="team-member member-4">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+    <div class="team-member member-5">
+      <div class="social-links">
+        <a href="#" class="gi"><i class="fab fa-github"></i></a>
+        <a href="" class="lin"><i class="fab fa-linkedin"></i></a>
+        <a href="" class="ins"><i class="fab fa-instagram-square"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="meet">
+    <h2>Let's Meet!</h2>
+</div>
+<div class="meet">
+    <div class="address">
+        <h4>Department of CS & IT</h4>
+        <h4>Madhav Institute of Technology & Science</h4>
+        <h4>Gwalior - 474005</h4>
+        <h4>Madhya Pradesh, INDIA</h4>
+    </div>
+    <div class="map">
+        <img src="images/map.png">
+    </div>
+</div>
+
+<script>
+  var slideindex = 0;
+  showslides();
+  function showslides() {
+    var sld = document.getElementsByClassName("slide");
+    for (var i = 0; i < sld.length; i++) {
+      sld[i].style.display = "none";
+    }
+    sld[slideindex].style.display = "block";
+    slideindex++;
+    if (slideindex >= sld.length) {
+      slideindex = 0;
+    }
+    setTimeout(showslides, 3000);
+  }
+
+  var evenindex = 0;
+  evenslides();
+  function evenslides() {
+    var sld = document.getElementsByClassName("slide-2");
+    for (var i = 0; i < sld.length; i++) {
+      sld[i].style.display = "none";
+    }
+    sld[evenindex].style.display = "block";
+    evenindex++;
+    if (evenindex >= sld.length) {
+      evenindex = 0;
+    }
+    setTimeout(evenslides, 3000);
+  }
+</script>
+<%- include("footer") -%>
