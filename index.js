@@ -2,6 +2,7 @@ const express = require("express");
 const Razorpay = require("razorpay");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const port = process.env.PORT || 3000;
 
 let posts = [];
 const razorpay = new Razorpay({
@@ -333,6 +334,4 @@ app.post("/complete",function(req,res){
     })
 })
 
-app.listen(3000,function(){
-    console.log("server is running.");
-})
+app.listen(port);
